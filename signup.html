@@ -26,7 +26,7 @@
             var cp=document.getElementById("p2").value;
 
             var letters = /^[A-Za-z]+$/;
-            var email_val = /^([a-zA-Z0-9_\.\-])+\@((+[a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2, 4})+$/;
+            var email_val = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
             if(n==''||e==''||p==''||cp==''){
                 alert("Enter each details correctly");
