@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sign Up Page</title>
+</head>
+<body style="text-align:center">
+    <h1> CREATE YOUR ACCOUNT</h1>
+    <table cellspacing="2" align="center" cellpadding="8" border="0">
+        <tr><td>Name</td>
+            <td><input type="text" placeholder="Enter Your Name" id="nl"></td></tr>
+        <tr><td>Email</td>
+            <td><input type="text" placeholder="Enter Your Email" id="el"></td></tr>
+        <tr><td>Set Password</td>
+            <td><input type="password" placeholder="Set a password" id="p1"></td></tr>
+        <tr><td>Confirm password</td>
+            <td><input type="password" placeholder="confirm your password" id="p2"></td></tr>
+        <tr>
+            <td><input type="submit" value="Create" onclick="create_account()"></td></tr>
+    </table>
+
+    <script type="text/javascript">
+        function create_account(){
+            var n=document.getElementById("nl").value;
+            var e=document.getElementById("el").value;
+            var p=document.getElementById("p1").value;
+            var cp=document.getElementById("p2").value;
+
+            var letters = /^[A-Za-z]+$/;
+            var email_val = /^([a-zA-Z0-9_\.\-])+\@((+[a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2, 4})+$/;
+
+            if(n==''||e==''||p==''||cp==''){
+                alert("Enter each details correctly");
+            }
+            else if (!letters.test(n)){
+                alert("Name is incorrect must contain alphabets");
+            }
+            else if (!email_val.test(e)){
+                alert("Invalid email format please enter valid email id");
+            }
+            else {
+                alert("your account has been created successfuly... Redirecting to JavaTpoint.com");
+                window.location="https://www.javatpoint.com/";
+            }
+        }
+    </script>
+
+</body>
+</html>
